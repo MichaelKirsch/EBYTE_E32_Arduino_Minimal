@@ -28,9 +28,11 @@ public:
 
     void set_new_paramters(bool save_when_power_down, uint8_t adress_low,uint8_t adress_high,uint8_t channel,UART_PARITY_BITS,UART_RATES,AIR_RATES,TRANSMISSION_MODE,TRANSMISSION_POWER,bool debug);
 
+    void sendCommand(uint8_t CMD[],uint8_t size);
+
 private:
 
-    void sendCommand(uint8_t CMD[],uint8_t size);
+
 
     void change_mode(Modes new_mode);
     Modes m_current_mode;
