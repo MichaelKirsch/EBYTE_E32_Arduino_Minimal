@@ -190,3 +190,8 @@ void E32LORA::set_new_paramters(bool save_when_power_down, uint8_t adress_low, u
     }
     sendCommand(to_send,6);
 }
+
+void E32LORA::send(char *buf, uint16_t length) {
+    m_serial.write(buf,length);
+}
+

@@ -22,7 +22,7 @@ public:
 
     String read_version_number();
 
-    void send(){};
+    void send(char * buf, uint16_t length);
 
     void resetModule();
 
